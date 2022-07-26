@@ -1,2 +1,49 @@
-# school_library
+# oop_school_library
 In this project, you will start building your school library app. In this initial step, you will implement the classes to represent students and teachers.
+
+## Getting Started
+
+- Open your terminal, move to the directory where you want to clone the app (i.e cd Documents)
+- Enter git clone https://github.com/GOlivierNation/oop_school_library.git
+- Change to the directory you just clone into (i.e cd  oop_school_library)
+- Include any possible changes and run "git add ."
+- Commit the changes with a descriptive message (i.e xyz features added)
+- Push the changes to changes to the repository (i.e git push)
+
+
+### Prerequisites
+
+- Ruby
+
+### Setup
+
+- linters for Ruby
+
+## Authors
+
+👤 **Olivier Gasominali**
+
+- GitHub: [@GOlivierNation](https://github.com/GOlivierNation)
+- Twitter: [@OGasominali](https://twitter.com/OGasominali)
+- LinkedIn: [LinkedIn](https://www.linkedin.com/in/oliviergasominali/)
+
+
+## 🤝 Contributing
+
+Contributions, issues, and feature requests are welcome!
+
+Feel free to check the [issues page](../../issues/).
+
+## Show your support
+
+Give a ⭐️ if you like this project!
+
+## Acknowledgments
+
+- Hat tip to anyone whose code was used
+- Inspiration
+- etc
+
+## 📝 License
+
+This project is [MIT](./MIT.md) licensed.
