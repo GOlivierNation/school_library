@@ -88,8 +88,4 @@ class App
   def create_person(persons, person)
     persons.push(person)
   end
-
-  def rent_book(rentals, rental)
-    rentals.push(rental)
-  end
 end
