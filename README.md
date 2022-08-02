@@ -27,7 +27,6 @@ In this project, you will start building your school library app. In this initia
 - Twitter: [@OGasominali](https://twitter.com/OGasominali)
 - LinkedIn: [LinkedIn](https://www.linkedin.com/in/oliviergasominali/)
 
-
 👤 **Abiodun Raheem**
 - GitHub: [@Abiodunraheem](https://github.com/Abiodunraheem)
 - Twitter: [@abiodunraheem23](https://twitter.com/abiodunraheem23)
