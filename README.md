@@ -23,6 +23,10 @@ In this project, you will start building your school library app. In this initia
 
 👤 **Olivier Gasominali**
 
+- GitHub: [@GOlivierNation](https://github.com/GOlivierNation)
+- Twitter: [@OGasominali](https://twitter.com/OGasominali)
+- LinkedIn: [LinkedIn](https://www.linkedin.com/in/oliviergasominali/)
+
 
 👤 **Abiodun Raheem**
 - GitHub: [@Abiodunraheem](https://github.com/Abiodunraheem)
