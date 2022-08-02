@@ -1,48 +1,43 @@
-require_relative './app'
+require './person'
+require './rental'
+require './book'
+require './app'
+
+class App
+  def initialize
+    @run = Library.new
+  end
+
+  def menu
+    choices = ['1 - List all book',
+               '2 - List all People',
+               '3 - Create a person',
+               '4 - Create a book',
+               '5 - Create a rental',
+               '6 - List all rentals for a given person id',
+               '7 - Exit']
+
+    choices.each { |choice| puts choice.to_s }
+  end
+
+  def start
+    puts 'Welcome to the School Library App!'
+    puts "\n"
+    puts 'Please choose an option by entering a number: '
+
+    loop do
+      menu
+      user_choose = gets.chomp.to_i
+      break if user_choose == 7
+
+      @run.choose(user_choose)
+    end
+    puts 'Thank you for using the app!'
+  end
+end
 
 def main
-  app = App.new
-  choose = nil
-
-  puts 'Welcome to School Library App!'
-  puts
-
-  while choose != '7'
-
-    puts 'Please choose an option by entering a number: '
-    options = [
-      '1 - List all books',
-      '2 - List all people',
-      '3 - Create a person',
-      '4 - Create a book',
-      '5 - Create a rental',
-      '6 - List all rentals for a given person id',
-      '7 - Exit'
-    ]
-    puts options
-
-    choose = gets.chomp
-    puts "Selected: #{choose}"
-
-    case choose
-    when '1'
-      app.books_list
-      puts 'first choose'
-    when '2'
-      app.person_list
-    when '3'
-      app.create_person
-    when '4'
-      app.book_data
-    when '5'
-      app.create_rental
-    when '6'
-      app.rentals_list
-    when '7'
-      puts 'Thank you for using the app!'
-      exit
-    end
-  end
+  App.new.start
 end
 
 main

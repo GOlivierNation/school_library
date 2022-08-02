@@ -1,19 +1,22 @@
-require_relative './person'
+require './person'
 
 class Student < Person
-  attr_reader :classroom
+  attr_accessor :classroom
 
-  def initialize(classroom, age, name = 'Unknown', parent_permission: true)
+  def initialize(age, classroom, name = 'Unknown', parent_permission: true)
     super(age, name, parent_permission: parent_permission)
     @classroom = classroom
   end
 
-  def play_hookey
-    '¯\(ツ)/¯'
+  def play_hooky
+    "¯\(ツ)/¯"
   end
 
-  def classroom=(classroom)
+  def add_classroom
     @classroom = classroom
-    classroom.student.push(self) unless classroom.student.include?(self)
+    classroom.students.push(self) unless classroom.students.include?(self)
   end
 end
+
+std = Student.new(16, 'History', 'Michal')
+p std.can_use_services?
