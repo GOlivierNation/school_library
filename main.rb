@@ -1,56 +1,48 @@
-require_relative './person'
-require_relative './book'
-require_relative './rental'
-require_relative './student'
-require_relative './teacher'
-require_relative './capitalize_name'
-require_relative './trim_name'
 require_relative './app'
 
-class Main < App
-  def initialize
-    super()
-    @book = []
-    @person = []
-    @rental = []
-    puts 'Welcome to the library!'
-  end
+def main
+  app = App.new
+  choose = nil
 
-  def ask
-    puts 'Select Option'
-    puts '================'
-    puts "1. List all books \n2. List all persons \n3. Create a book \n4. Create a person
-    \n5. Rent a book \n6. List all rentals per person \n7. Exit"
-    puts
-    option = gets.chomp
-    case option
+  puts 'Welcome to School Library App!'
+  puts
+
+  while choose != '7'
+
+    puts 'Please choose an option by entering a number: '
+    options = [
+      '1 - List all books',
+      '2 - List all people',
+      '3 - Create a person',
+      '4 - Create a book',
+      '5 - Create a rental',
+      '6 - List all rentals for a given person id',
+      '7 - Exit'
+    ]
+    puts options
+
+    choose = gets.chomp
+    puts "Selected: #{choose}"
+
+    case choose
     when '1'
-      list_book(@book)
-      ask
+      app.books_list
+      puts 'first choose'
     when '2'
-      list_persons(@person)
-      ask
+      app.person_list
     when '3'
-      create_new_book
-      ask
-    end
-    run(option)
-  end
-
-  def run(num)
-    case num
+      app.create_person
     when '4'
-      add_persons
+      app.book_data
     when '5'
-      append_rental
-      ask
+      app.create_rental
     when '6'
-      filter_list_book
-      ask
+      app.rentals_list
     when '7'
-      puts 'Goodbye!'
+      puts 'Thank you for using the app!'
+      exit
     end
   end
 end
 
-Main.new.ask
+main
