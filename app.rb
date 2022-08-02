@@ -49,6 +49,12 @@ class App
     puts "Teacher #{name} has been added to the library"
   end
 
+  def instantiate_person_teacher
+    new_teacher = Teacher.new(specialization, age, name)
+    create_person(@person, new_teacher)
+    puts "Teacher #{name} has been added to the library"
+  end
+
   def append_rental
     puts 'Select a book'
     @book.each_with_index { |book, index| puts "#{index}: #{book.title}" }
@@ -56,6 +62,9 @@ class App
     puts 'Select a person'
     @person.each_with_index { |person, index| puts "#{index}: #{person.name}" }
     person_index = gets.chomp.to_i
+  end
+
+  def instantiate_append_rental
     new_rent = Rental.new(@book[book_index], @person[person_index])
     rent_book(@rental, new_rent)
     puts "Book #{@book[book_index].title} has been rented to #{@person[person_index].name}"
@@ -66,6 +75,9 @@ class App
     title = gets.chomp
     puts 'Enter the author of the book'
     author = gets.chomp
+  end
+
+  def instantiate_create_new_book
     new_book = Book.new(title, author)
     create_book(@book, new_book)
     puts "Book #{title} by #{author} has been added to the library"
