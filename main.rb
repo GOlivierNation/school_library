@@ -3,12 +3,9 @@ require_relative './app'
 def main
   app = App.new
   choose = nil
-
   puts 'Welcome to School Library App!'
   puts
-
   while choose != '7'
-
     puts 'Please choose an option by entering a number: '
     options = [
       '1 - List all books',
@@ -20,10 +17,8 @@ def main
       '7 - Exit'
     ]
     puts options
-
     choose = gets.chomp
     puts "Selected: #{choose}"
-
     case choose
     when '1'
       app.books_list

@@ -132,7 +132,6 @@ class App
     puts('Rentals: ')
 
     @rentals.each do |rental|
-      # binding.pry
       next unless rental.person.id == selected_id
 
       puts
