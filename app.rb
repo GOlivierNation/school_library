@@ -32,6 +32,9 @@ class App
     puts 'Enter the age of the student'
     age = gets.chomp
     classroom = 'Math'
+  end
+
+  def person_student
     new_student = Student.new(classroom, age, name)
     create_person(@person, new_student)
     puts "Student #{name} has been added to the library"
@@ -44,9 +47,6 @@ class App
     age = gets.chomp
     puts 'Enter the specialization of the teacher'
     specialization = gets.chomp
-    new_teacher = Teacher.new(specialization, age, name)
-    create_person(@person, new_teacher)
-    puts "Teacher #{name} has been added to the library"
   end
 
   def instantiate_person_teacher
