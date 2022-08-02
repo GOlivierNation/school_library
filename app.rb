@@ -24,7 +24,7 @@ class App
   # 2 - List all people'
   def person_list
     @persons.each do |individual|
-      puts "[#{individual.class}] Name: #{individual.name}, Age: #{individual.age}"
+      puts "[#{individual.class}] Age: #{individual.age}, Name: #{individual.name}"
     end
   end
 
