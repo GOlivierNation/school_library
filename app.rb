@@ -24,7 +24,8 @@ class App
   # 2 - List all people'
   def person_list
     @persons.each do |individual|
-      puts "[#{individual.class}] Age: #{individual.age}, Name: #{individual.name}"
+      # binding.pry
+      puts "[#{individual.class}] Name: #{individual.name}, Age: #{individual.age}"
     end
   end
 
@@ -33,7 +34,7 @@ class App
     print 'Specialization: '
     specialization = gets.chomp
 
-    @persons << Teacher.new(specialization, age, name)
+    @persons << Teacher.new(specialization, name, age)
     puts 'create teacher'
   end
 
@@ -132,6 +133,7 @@ class App
     puts('Rentals: ')
 
     @rentals.each do |rental|
+      # binding.pry
       next unless rental.person.id == selected_id
 
       puts
