@@ -123,6 +123,15 @@ class Library
     while title == ''
       print 'Book title: '
       title = gets.chomp.capitalize
+      save = []
+    @books.each do |book|
+      save << {
+        title: book.title,
+        author: book.author
+      }
+    end
+    save_book = JSON.generate(save)
+    File.write('./books.json', save_book.to_s)
     end
 
     print 'Book author: '

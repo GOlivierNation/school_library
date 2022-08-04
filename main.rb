@@ -2,6 +2,7 @@ require './person'
 require './rental'
 require './book'
 require './app'
+require 'json'
 
 class App
   def initialize
