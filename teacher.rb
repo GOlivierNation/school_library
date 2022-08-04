@@ -11,5 +11,5 @@ class Teacher < Person
   end
 end
 
-teacher = Teacher.new(36, 'mathematics', 'Olivier')
+teacher = Teacher.new(26, 'Web Development', 'Abiodun')
 p teacher.can_use_services?

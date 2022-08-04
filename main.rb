@@ -2,7 +2,6 @@ require './person'
 require './rental'
 require './book'
 require './app'
-require 'json'
 
 class App
   def initialize
@@ -29,7 +28,6 @@ class App
     loop do
       menu
       user_choose = gets.chomp.to_i
-      break if user_choose == 7
 
       @run.choose(user_choose)
     end
