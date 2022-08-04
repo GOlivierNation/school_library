@@ -11,8 +11,6 @@ class Library
     @rentals = []
     @books = []
     @people = []
-    load_data
-    load_reantals
   end
 
   # rubocop:disable Metrics/CyclomaticComplexity
