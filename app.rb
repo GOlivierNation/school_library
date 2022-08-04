@@ -3,9 +3,12 @@ require './book'
 require './rental'
 require './teacher'
 require './student'
+require './init'
+require 'json'
+require './list'
 
 # rubocop:disable Metrics/ClassLength
-class Library
+class Library < List
   def initialize
     @rentals = []
     @books = []
@@ -123,15 +126,15 @@ class Library
     while title == ''
       print 'Book title: '
       title = gets.chomp.capitalize
-      save = []
-    @books.each do |book|
-      save << {
-        title: book.title,
-        author: book.author
-      }
-    end
-    save_book = JSON.generate(save)
-    File.write('./books.json', save_book.to_s)
+    #   save = []
+    # @books.each do |book|
+    #   save << {
+    #     title: book.title,
+    #     author: book.author
+    #   }
+    # end
+    # save_book = JSON.generate(save)
+    # File.write('./books.json', save_book.to_s)
     end
 
     print 'Book author: '
