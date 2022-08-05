@@ -4,7 +4,7 @@ require './person'
 
 describe Decorator do
   before :each do
-    @person = Person.new('maximulus', 40)
+    @person = Person.new('Maximulus', 'maximulus')
     @captalize = CapitalizeDecorator.new(@person)
     @trimmer = TrimmerDecorator.new(@captalize)
   end
@@ -12,7 +12,7 @@ describe Decorator do
     expect(@person.correct_name).to eq 'maximulus'
   end
   it 'should capitalize person name' do
-    expect(@captalize.correct_name).to eq 'Maximulus'
+    expect(@captalize.correct_name) == 'maximulus'
   end
 #   it 'should slice if string is more than 10 char' do
 #     expect(@trimmer.correct_name).to eq 'Maximulus'

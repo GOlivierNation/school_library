@@ -2,7 +2,7 @@
 
 # describe Teacher do
 #   before :each do
-#     @teacher = Teacher.new(102, 44, 'TEST')
+#     @teacher = Teacher.new('TEST', 44)
 #   end
 
 #   it 'instance of teacher' do
