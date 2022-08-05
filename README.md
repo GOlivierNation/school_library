@@ -1,5 +1,5 @@
 # oop_school_library
-In this project, you will start building your school library app. In this initial step, you will implement the classes to represent students and teachers
+In this project, you will start building your school library app. In this initial step, you will implement the classes to represent students and teachers.
 
 ## Getting Started
 
