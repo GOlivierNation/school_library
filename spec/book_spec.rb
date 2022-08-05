@@ -3,7 +3,7 @@ require './rental'
 
 describe Book do
   before :each do
-    @book = Book.new nil, 'title', 'authour'
+    @book = Book.new('title', 'authour')
   end
 
   it 'should print the book title' do

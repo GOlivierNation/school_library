@@ -3,7 +3,7 @@ require 'yaml'
 
 describe Person do
   before :each do
-    @person = Person.new(1, 26, 'TEST')
+    @person = Person.new(26, 'TEST')
   end
 
   it 'age is correct ?' do
@@ -11,6 +11,6 @@ describe Person do
   end
 
   it 'can use services ?' do
-    @person.can_use_servies?.should == true
+    @person.can_use_services?.should == true
   end
 end
