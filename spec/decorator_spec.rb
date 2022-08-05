@@ -1,4 +1,4 @@
-# require './captalize'
+# require './capitalize_decorator'
 # require './trimmer'
 # require './person'
 
