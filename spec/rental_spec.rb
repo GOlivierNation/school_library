@@ -1,16 +1,22 @@
+require './teacher'
 require './book'
-require './rental'
+require './student'
 
-describe Book do
+describe Rental do
   before :each do
-    @book = Book.new nil, 'The Lion And The Jewel', 'Wole Soyinka'
+    @person = Student.new nil, nil, 19, 'charles', parent_permission: true
+    @book = Book.new nil, 'Hello', 'World'
+    @rental = Rental.new '2022/06/22', @person, @book
   end
 
-  it 'should print the book title' do
-    expect(@book.title).to eq 'The Lion And The Jewel'
+  it 'should display rented book title' do
+    @person.rentals.each do |rental|
+      expect(rental.person.title).to eq 'Hello'
+    end
   end
-
-  it 'should print the book author' do
-    expect(@book.author).to eq 'Wole Soyinka'
+  it 'should display rented date' do
+    @person.rentals.each do |rental|
+      expect(rental.date).to eq '2022/06/22'
+    end
   end
 end
