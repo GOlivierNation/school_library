@@ -14,8 +14,4 @@ describe Decorator do
   it 'should capitalize person name' do
     expect(@captalize.correct_name) == 'maximulus'
   end
-#   it 'should slice if string is more than 10 char' do
-#     expect(@trimmer.correct_name).to eq 'Maximulus'
-#     expect(@trimmer.correct_name.length).to be <= 10
-#   end
 end
