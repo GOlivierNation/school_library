@@ -11,6 +11,6 @@ describe Person do
   end
 
   it 'can use services ?' do
-    @person.can_use_services?.should == true
+    @person.can_use_services? == true
   end
 end
